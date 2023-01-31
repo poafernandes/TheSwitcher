@@ -1,0 +1,657 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F16CC60129881B140046F504 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16CC60029881B140046F504 /* AppDelegate.swift */; };
+		F16CC60329881B140046F504 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16CC60229881B140046F504 /* SceneDelegate.swift */; };
+		F16CC60B29881B140046F504 /* TheSwitcher_AlexandrePortoAlegre.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F16CC60929881B140046F504 /* TheSwitcher_AlexandrePortoAlegre.xcdatamodeld */; };
+		F16CC60D29881B160046F504 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F16CC60C29881B160046F504 /* Assets.xcassets */; };
+		F16CC61B29881B160046F504 /* TheSwitcher_AlexandrePortoAlegreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16CC61A29881B160046F504 /* TheSwitcher_AlexandrePortoAlegreTests.swift */; };
+		F16CC635298838AA0046F504 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16CC634298838AA0046F504 /* CoreDataManager.swift */; };
+		F16CC64229884C750046F504 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16CC64129884C750046F504 /* Constants.swift */; };
+		F16CC645298852DD0046F504 /* RoomTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16CC644298852DD0046F504 /* RoomTableView.swift */; };
+		F16CC6472988530B0046F504 /* RoomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16CC6462988530B0046F504 /* RoomTableViewCell.swift */; };
+		F16CC64B2988538F0046F504 /* RoomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16CC64A2988538F0046F504 /* RoomTableViewController.swift */; };
+		F16CC64D2988766E0046F504 /* DataLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16CC64C2988766E0046F504 /* DataLabelView.swift */; };
+		F16CC650298884590046F504 /* Room+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16CC64E298884590046F504 /* Room+CoreDataClass.swift */; };
+		F16CC651298884590046F504 /* Room+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16CC64F298884590046F504 /* Room+CoreDataProperties.swift */; };
+		F16CC65A2988ADD20046F504 /* RoomInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16CC6592988ADD20046F504 /* RoomInfoViewController.swift */; };
+		F16CC65C2988AEE10046F504 /* RoomInfoStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16CC65B2988AEE10046F504 /* RoomInfoStackView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F16CC61729881B160046F504 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F16CC5F529881B140046F504 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F16CC5FC29881B140046F504;
+			remoteInfo = TheSwitcher_AlexandrePortoAlegre;
+		};
+		F16CC62129881B160046F504 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F16CC5F529881B140046F504 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F16CC5FC29881B140046F504;
+			remoteInfo = TheSwitcher_AlexandrePortoAlegre;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F16CC5FD29881B140046F504 /* TheSwitcher_AlexandrePortoAlegre.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheSwitcher_AlexandrePortoAlegre.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F16CC60029881B140046F504 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F16CC60229881B140046F504 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		F16CC60A29881B140046F504 /* TheSwitcher_AlexandrePortoAlegre.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TheSwitcher_AlexandrePortoAlegre.xcdatamodel; sourceTree = "<group>"; };
+		F16CC60C29881B160046F504 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F16CC61129881B160046F504 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F16CC61629881B160046F504 /* TheSwitcher_AlexandrePortoAlegreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TheSwitcher_AlexandrePortoAlegreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F16CC61A29881B160046F504 /* TheSwitcher_AlexandrePortoAlegreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheSwitcher_AlexandrePortoAlegreTests.swift; sourceTree = "<group>"; };
+		F16CC62029881B160046F504 /* TheSwitcher_AlexandrePortoAlegreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TheSwitcher_AlexandrePortoAlegreUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F16CC634298838AA0046F504 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		F16CC64129884C750046F504 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F16CC644298852DD0046F504 /* RoomTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomTableView.swift; sourceTree = "<group>"; };
+		F16CC6462988530B0046F504 /* RoomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomTableViewCell.swift; sourceTree = "<group>"; };
+		F16CC64A2988538F0046F504 /* RoomTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomTableViewController.swift; sourceTree = "<group>"; };
+		F16CC64C2988766E0046F504 /* DataLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLabelView.swift; sourceTree = "<group>"; };
+		F16CC64E298884590046F504 /* Room+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Room+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F16CC64F298884590046F504 /* Room+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Room+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F16CC6592988ADD20046F504 /* RoomInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomInfoViewController.swift; sourceTree = "<group>"; };
+		F16CC65B2988AEE10046F504 /* RoomInfoStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomInfoStackView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F16CC5FA29881B140046F504 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F16CC61329881B160046F504 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F16CC61D29881B160046F504 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F16CC5F429881B140046F504 = {
+			isa = PBXGroup;
+			children = (
+				F16CC5FF29881B140046F504 /* TheSwitcher_AlexandrePortoAlegre */,
+				F16CC61929881B160046F504 /* TheSwitcher_AlexandrePortoAlegreTests */,
+				F16CC5FE29881B140046F504 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F16CC5FE29881B140046F504 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F16CC5FD29881B140046F504 /* TheSwitcher_AlexandrePortoAlegre.app */,
+				F16CC61629881B160046F504 /* TheSwitcher_AlexandrePortoAlegreTests.xctest */,
+				F16CC62029881B160046F504 /* TheSwitcher_AlexandrePortoAlegreUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F16CC5FF29881B140046F504 /* TheSwitcher_AlexandrePortoAlegre */ = {
+			isa = PBXGroup;
+			children = (
+				F16CC6582988A13E0046F504 /* Model */,
+				F16CC648298853690046F504 /* ViewController */,
+				F16CC643298852A70046F504 /* Views */,
+				F16CC60029881B140046F504 /* AppDelegate.swift */,
+				F16CC60229881B140046F504 /* SceneDelegate.swift */,
+				F16CC6332988389C0046F504 /* Manager */,
+				F16CC60C29881B160046F504 /* Assets.xcassets */,
+				F16CC61129881B160046F504 /* Info.plist */,
+				F16CC60929881B140046F504 /* TheSwitcher_AlexandrePortoAlegre.xcdatamodeld */,
+				F16CC64129884C750046F504 /* Constants.swift */,
+			);
+			path = TheSwitcher_AlexandrePortoAlegre;
+			sourceTree = "<group>";
+		};
+		F16CC61929881B160046F504 /* TheSwitcher_AlexandrePortoAlegreTests */ = {
+			isa = PBXGroup;
+			children = (
+				F16CC61A29881B160046F504 /* TheSwitcher_AlexandrePortoAlegreTests.swift */,
+			);
+			path = TheSwitcher_AlexandrePortoAlegreTests;
+			sourceTree = "<group>";
+		};
+		F16CC6332988389C0046F504 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				F16CC634298838AA0046F504 /* CoreDataManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		F16CC643298852A70046F504 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F16CC644298852DD0046F504 /* RoomTableView.swift */,
+				F16CC6462988530B0046F504 /* RoomTableViewCell.swift */,
+				F16CC64C2988766E0046F504 /* DataLabelView.swift */,
+				F16CC65B2988AEE10046F504 /* RoomInfoStackView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F16CC648298853690046F504 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F16CC64A2988538F0046F504 /* RoomTableViewController.swift */,
+				F16CC6592988ADD20046F504 /* RoomInfoViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		F16CC652298884630046F504 /* Rooms */ = {
+			isa = PBXGroup;
+			children = (
+				F16CC64E298884590046F504 /* Room+CoreDataClass.swift */,
+				F16CC64F298884590046F504 /* Room+CoreDataProperties.swift */,
+			);
+			path = Rooms;
+			sourceTree = "<group>";
+		};
+		F16CC6582988A13E0046F504 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F16CC652298884630046F504 /* Rooms */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F16CC5FC29881B140046F504 /* TheSwitcher_AlexandrePortoAlegre */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F16CC62A29881B160046F504 /* Build configuration list for PBXNativeTarget "TheSwitcher_AlexandrePortoAlegre" */;
+			buildPhases = (
+				F16CC5F929881B140046F504 /* Sources */,
+				F16CC5FA29881B140046F504 /* Frameworks */,
+				F16CC5FB29881B140046F504 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TheSwitcher_AlexandrePortoAlegre;
+			productName = TheSwitcher_AlexandrePortoAlegre;
+			productReference = F16CC5FD29881B140046F504 /* TheSwitcher_AlexandrePortoAlegre.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F16CC61529881B160046F504 /* TheSwitcher_AlexandrePortoAlegreTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F16CC62D29881B160046F504 /* Build configuration list for PBXNativeTarget "TheSwitcher_AlexandrePortoAlegreTests" */;
+			buildPhases = (
+				F16CC61229881B160046F504 /* Sources */,
+				F16CC61329881B160046F504 /* Frameworks */,
+				F16CC61429881B160046F504 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F16CC61829881B160046F504 /* PBXTargetDependency */,
+			);
+			name = TheSwitcher_AlexandrePortoAlegreTests;
+			productName = TheSwitcher_AlexandrePortoAlegreTests;
+			productReference = F16CC61629881B160046F504 /* TheSwitcher_AlexandrePortoAlegreTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F16CC61F29881B160046F504 /* TheSwitcher_AlexandrePortoAlegreUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F16CC63029881B160046F504 /* Build configuration list for PBXNativeTarget "TheSwitcher_AlexandrePortoAlegreUITests" */;
+			buildPhases = (
+				F16CC61C29881B160046F504 /* Sources */,
+				F16CC61D29881B160046F504 /* Frameworks */,
+				F16CC61E29881B160046F504 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F16CC62229881B160046F504 /* PBXTargetDependency */,
+			);
+			name = TheSwitcher_AlexandrePortoAlegreUITests;
+			productName = TheSwitcher_AlexandrePortoAlegreUITests;
+			productReference = F16CC62029881B160046F504 /* TheSwitcher_AlexandrePortoAlegreUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F16CC5F529881B140046F504 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					F16CC5FC29881B140046F504 = {
+						CreatedOnToolsVersion = 14.0.1;
+					};
+					F16CC61529881B160046F504 = {
+						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = F16CC5FC29881B140046F504;
+					};
+					F16CC61F29881B160046F504 = {
+						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = F16CC5FC29881B140046F504;
+					};
+				};
+			};
+			buildConfigurationList = F16CC5F829881B140046F504 /* Build configuration list for PBXProject "TheSwitcher_AlexandrePortoAlegre" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F16CC5F429881B140046F504;
+			productRefGroup = F16CC5FE29881B140046F504 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F16CC5FC29881B140046F504 /* TheSwitcher_AlexandrePortoAlegre */,
+				F16CC61529881B160046F504 /* TheSwitcher_AlexandrePortoAlegreTests */,
+				F16CC61F29881B160046F504 /* TheSwitcher_AlexandrePortoAlegreUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F16CC5FB29881B140046F504 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F16CC60D29881B160046F504 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F16CC61429881B160046F504 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F16CC61E29881B160046F504 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F16CC5F929881B140046F504 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F16CC65C2988AEE10046F504 /* RoomInfoStackView.swift in Sources */,
+				F16CC6472988530B0046F504 /* RoomTableViewCell.swift in Sources */,
+				F16CC64B2988538F0046F504 /* RoomTableViewController.swift in Sources */,
+				F16CC60129881B140046F504 /* AppDelegate.swift in Sources */,
+				F16CC65A2988ADD20046F504 /* RoomInfoViewController.swift in Sources */,
+				F16CC651298884590046F504 /* Room+CoreDataProperties.swift in Sources */,
+				F16CC60B29881B140046F504 /* TheSwitcher_AlexandrePortoAlegre.xcdatamodeld in Sources */,
+				F16CC635298838AA0046F504 /* CoreDataManager.swift in Sources */,
+				F16CC60329881B140046F504 /* SceneDelegate.swift in Sources */,
+				F16CC64229884C750046F504 /* Constants.swift in Sources */,
+				F16CC64D2988766E0046F504 /* DataLabelView.swift in Sources */,
+				F16CC650298884590046F504 /* Room+CoreDataClass.swift in Sources */,
+				F16CC645298852DD0046F504 /* RoomTableView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F16CC61229881B160046F504 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F16CC61B29881B160046F504 /* TheSwitcher_AlexandrePortoAlegreTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F16CC61C29881B160046F504 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F16CC61829881B160046F504 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F16CC5FC29881B140046F504 /* TheSwitcher_AlexandrePortoAlegre */;
+			targetProxy = F16CC61729881B160046F504 /* PBXContainerItemProxy */;
+		};
+		F16CC62229881B160046F504 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F16CC5FC29881B140046F504 /* TheSwitcher_AlexandrePortoAlegre */;
+			targetProxy = F16CC62129881B160046F504 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		F16CC62829881B160046F504 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F16CC62929881B160046F504 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				"SWIFT_ACTIVE_COMPILATION_CONDITIONS[arch=*]" = "";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F16CC62B29881B160046F504 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P8UWJ8RN9N;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TheSwitcher_AlexandrePortoAlegre/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				"OTHER_SWIFT_FLAGS[arch=*]" = "-D DEBUG";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.TheSwitcher-AlexandrePortoAlegre";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F16CC62C29881B160046F504 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P8UWJ8RN9N;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TheSwitcher_AlexandrePortoAlegre/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.TheSwitcher-AlexandrePortoAlegre";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F16CC62E29881B160046F504 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P8UWJ8RN9N;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.TheSwitcher-AlexandrePortoAlegreTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TheSwitcher_AlexandrePortoAlegre.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TheSwitcher_AlexandrePortoAlegre";
+			};
+			name = Debug;
+		};
+		F16CC62F29881B160046F504 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P8UWJ8RN9N;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.TheSwitcher-AlexandrePortoAlegreTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TheSwitcher_AlexandrePortoAlegre.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TheSwitcher_AlexandrePortoAlegre";
+			};
+			name = Release;
+		};
+		F16CC63129881B160046F504 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P8UWJ8RN9N;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.TheSwitcher-AlexandrePortoAlegreUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TheSwitcher_AlexandrePortoAlegre;
+			};
+			name = Debug;
+		};
+		F16CC63229881B160046F504 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P8UWJ8RN9N;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.TheSwitcher-AlexandrePortoAlegreUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TheSwitcher_AlexandrePortoAlegre;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F16CC5F829881B140046F504 /* Build configuration list for PBXProject "TheSwitcher_AlexandrePortoAlegre" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F16CC62829881B160046F504 /* Debug */,
+				F16CC62929881B160046F504 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F16CC62A29881B160046F504 /* Build configuration list for PBXNativeTarget "TheSwitcher_AlexandrePortoAlegre" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F16CC62B29881B160046F504 /* Debug */,
+				F16CC62C29881B160046F504 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F16CC62D29881B160046F504 /* Build configuration list for PBXNativeTarget "TheSwitcher_AlexandrePortoAlegreTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F16CC62E29881B160046F504 /* Debug */,
+				F16CC62F29881B160046F504 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F16CC63029881B160046F504 /* Build configuration list for PBXNativeTarget "TheSwitcher_AlexandrePortoAlegreUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F16CC63129881B160046F504 /* Debug */,
+				F16CC63229881B160046F504 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F16CC60929881B140046F504 /* TheSwitcher_AlexandrePortoAlegre.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F16CC60A29881B140046F504 /* TheSwitcher_AlexandrePortoAlegre.xcdatamodel */,
+			);
+			currentVersion = F16CC60A29881B140046F504 /* TheSwitcher_AlexandrePortoAlegre.xcdatamodel */;
+			path = TheSwitcher_AlexandrePortoAlegre.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = F16CC5F529881B140046F504 /* Project object */;
+}
