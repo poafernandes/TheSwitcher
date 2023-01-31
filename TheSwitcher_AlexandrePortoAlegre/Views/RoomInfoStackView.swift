@@ -17,7 +17,9 @@ class RoomInfoStackView: UIView {
     private let imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "light_image_OFF")
+        imageView.contentMode = .scaleAspectFit
         imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.backgroundColor = UIColor(red: 211/255, green: 211/255, blue: 211/255, alpha: 0.9)
         return imageView
     }()
     
@@ -106,4 +108,9 @@ class RoomInfoStackView: UIView {
         stateLabel.centerXAnchor.constraint(equalTo: stackView.centerXAnchor).isActive = true
     }
     
+    func setupData(room: String, state: Bool){
+        roomLabel.text = "Your \(room)'s light is"
+        stateLabel.text = state ? "On".uppercased() : "Off".uppercased()
+        lightState = state
+    }
 }

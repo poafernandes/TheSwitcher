@@ -9,7 +9,7 @@ import UIKit
 
 class RoomTableViewCell: UITableViewCell {
     
-    static let identifider = "RoomCell"
+    static let identifider = Constants.RoomTableCell.roomTableCell
     
     private let roomTitle: UILabel = {
         let label = UILabel()
@@ -21,7 +21,7 @@ class RoomTableViewCell: UITableViewCell {
     }()
     
     
-    private let lightSwitch: UISwitch = {
+    let lightSwitch: UISwitch = {
         let uiSwitch = UISwitch()
         uiSwitch.setOn(false, animated: true)
         uiSwitch.onTintColor = .yellow
@@ -29,13 +29,6 @@ class RoomTableViewCell: UITableViewCell {
 
         return uiSwitch
     }()
-    
-    var lightState: Bool {
-        get {
-            lightSwitch.isOn
-        }
-    }
-    
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)

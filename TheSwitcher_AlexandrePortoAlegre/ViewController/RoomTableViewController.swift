@@ -53,7 +53,7 @@ class RoomTableViewController: UIViewController {
     }
     
     func pushInfoViewController(room: Room){
-        let infoVC = RoomInfoViewController()
+        let infoVC = RoomInfoViewController(room: room)
         infoVC.selectedRoom = room
         navigationController?.pushViewController(infoVC, animated: true)
     }
@@ -75,15 +75,15 @@ extension RoomTableViewController: UITableViewDataSource {
         let room = roomsData[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: RoomTableViewCell.identifider, for: indexPath) as! RoomTableViewCell
         cell.setData(label: room.name ?? "", state: room.light)
+        cell.lightSwitch.tag = indexPath.row
+        cell.lightSwitch.addTarget(self, action: #selector(switchChanged), for: .valueChanged)
         return cell
     }
     
-    @objc func switchChanged(_ index: Int, state: Bool){
-        
+    @objc func switchChanged(_ sender:UISwitch){
         let coreDataManager = CoreDataManager(context: self.context)
-        let item = roomsData[index]
-        coreDataManager.updateData(item: item, lightState: state)
-        
+        let item = roomsData[sender.tag]
+        coreDataManager.updateData(item: item, lightState: sender.isOn)
     }
 }
 
