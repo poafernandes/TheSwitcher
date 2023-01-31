@@ -51,9 +51,19 @@ class RoomTableViewController: UIViewController {
         
         return fetchedData
     }
+    
+    func pushInfoViewController(room: Room){
+        let infoVC = RoomInfoViewController()
+        infoVC.selectedRoom = room
+        navigationController?.pushViewController(infoVC, animated: true)
+    }
 }
 
 extension RoomTableViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedRoom = roomsData[indexPath.row]
+        pushInfoViewController(room: selectedRoom)
+    }
 }
 
 extension RoomTableViewController: UITableViewDataSource {

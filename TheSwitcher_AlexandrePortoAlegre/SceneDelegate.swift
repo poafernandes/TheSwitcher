@@ -20,6 +20,20 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             
             let navigationController = UINavigationController(rootViewController: RoomTableViewController())
             
+            if #available(iOS 13.0, *) {
+                let navBarAppearance = UINavigationBarAppearance()
+                navBarAppearance.configureWithOpaqueBackground()
+                navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+                navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+                
+                navBarAppearance.backgroundColor = UIColor(red: 116/255, green: 160/255, blue: 83/255, alpha: 1)
+                UINavigationBar.appearance(whenContainedInInstancesOf: [UINavigationController.self]).standardAppearance = navBarAppearance
+                UINavigationBar.appearance(whenContainedInInstancesOf: [UINavigationController.self]).scrollEdgeAppearance = navBarAppearance
+
+            }
+            
+            navigationController.navigationBar.tintColor = .white
+            
             window?.rootViewController = navigationController
         
             window?.makeKeyAndVisible()
