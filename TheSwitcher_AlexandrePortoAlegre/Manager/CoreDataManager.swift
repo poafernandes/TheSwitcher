@@ -8,57 +8,42 @@
 import CoreData
 
 final class CoreDataManager {
-    private let modelName: String
-        
-    init(modelName: String) {
-        self.modelName = Constants.Storage.Model
+    
+    let context: NSManagedObjectContext
+    
+    init(context: NSManagedObjectContext){
+        self.context = context
     }
     
-    private lazy var managedObjectModel: NSManagedObjectModel = {
-        guard let modelURL = Bundle.main.url(forResource: self.modelName, withExtension: "momd") else {
-            fatalError("Unable to locate \(self.modelName)")
+    func fetchData() -> [Room]? {
+        do {
+            let items = try context.fetch(Room.fetchRequest())
+            return items
+        } catch {
+            NSLog("Error while fetching data - \(error.localizedDescription)")
         }
-
-        guard let managedObjectModel = NSManagedObjectModel(contentsOf: modelURL) else {
-            fatalError("Unable to load data")
-        }
-
-        return managedObjectModel
-    }()
-
-    private lazy var persistentStoreCoordinator: NSPersistentStoreCoordinator = {
-        let persistentStoreCoordinator = NSPersistentStoreCoordinator(managedObjectModel: self.managedObjectModel)
-
-        let fileManager = FileManager()
-        let storeFilename = "\(self.modelName).sqlite"
-
-        guard let libraryDirectoryURL = fileManager.urls(for: .libraryDirectory, in: .userDomainMask).first else {
-            fatalError("Unable do get library URL")
-        }
-        let persistentStoreURL = libraryDirectoryURL.appendingPathComponent(storeFilename)
-        
-        #if DEBUG
-            print(persistentStoreURL)
-        #endif
+        return nil
+    }
+    
+    func createData(name: String) {
+        let newRoom = Room(context: context)
+        newRoom.name = name
+        newRoom.light = false
+        newRoom.createdAt = Date()
         
         do {
-            try persistentStoreCoordinator.addPersistentStore(ofType: NSSQLiteStoreType,
-                                                              configurationName: nil,
-                                                              at: persistentStoreURL,
-                                                              options: nil)
+            try context.save()
         } catch {
-            fatalError("Unable to add persistent store")
+            NSLog("Error while creating data - \(error.localizedDescription)")
         }
-        
-        return persistentStoreCoordinator
-    }()
+    }
     
-    private(set) lazy var managedObjectContext: NSManagedObjectContext = {
-        let managedObjectContext = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
-        
-        managedObjectContext.persistentStoreCoordinator = self.persistentStoreCoordinator
-        return managedObjectContext
-        
-    }()
-
+    func updateData(item: Room, lightState: Bool){
+        item.light = lightState
+        do {
+            try context.save()
+        } catch {
+            NSLog("Error while updating data - \(error.localizedDescription)")
+        }
+    }
 }
